@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Gliderport. All rights reserved.
 //
 
+
+
 #import "KTAppDelegate.h"
 
 @implementation KTAppDelegate

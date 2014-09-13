@@ -205,6 +205,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Gliderport;
 				TargetAttributes = {
+					B738316619C37FF800AD5330 = {
+						DevelopmentTeam = 2YVWH85J83;
+					};
 					B738318A19C37FF800AD5330 = {
 						TestTargetID = B738316619C37FF800AD5330;
 					};
@@ -465,6 +468,7 @@
 				B738319E19C37FF800AD5330 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B738319F19C37FF800AD5330 /* Build configuration list for PBXNativeTarget "kittyTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +477,7 @@
 				B73831A119C37FF800AD5330 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
