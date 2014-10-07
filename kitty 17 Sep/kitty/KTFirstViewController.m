@@ -7,6 +7,7 @@
 //
 
 #import "KTFirstViewController.h"
+#import "XMLParser.h"
 
 @interface KTFirstViewController ()
 
@@ -18,41 +19,39 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self createScrollView];
+}
+
+-(void)createScrollView
+{
+    int PageCount = 15;
     
-    //How many pages do we want?
-    int PageCount = 3;
-    
-    //Setup scroll view
-    UIScrollView *Scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 90, 320,330)];
-    Scroller.backgroundColor = [UIColor clearColor];
-    Scroller.pagingEnabled = YES;
-    Scroller.contentSize = CGSizeMake(PageCount * Scroller.bounds.size.width, Scroller.bounds.size.height);
+    UIScrollView *scroller = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 90, 320, 350)];
+    //scroller.contentSize = CGSizeMake(320, PageCount * 1500);
+    scroller.contentSize = CGSizeMake(scroller.bounds.size.width, PageCount * scroller.bounds.size.height);
     
     //Setup Each View Size
-    CGRect ViewSize = Scroller.bounds;
-    
+    //CGRect ViewSize = CGRectMake(0, 0, 320, 1500);
+    CGRect ViewSize = scroller.bounds;
+    //
     //Setup and Add Images
     UIImageView *ImgView = [[UIImageView alloc] initWithFrame:ViewSize];
     [ImgView setImage:[UIImage imageNamed:@"Page_1.png"]];
-    [Scroller addSubview:ImgView];
+    [scroller addSubview:ImgView];
     
     //Offset View Size
-    ViewSize = CGRectOffset(ViewSize, Scroller.bounds.size.width, 0);
+    ViewSize = CGRectOffset(ViewSize, scroller.bounds.size.width, 0);
     
     UIImageView *ImgView2 = [[UIImageView alloc] initWithFrame:ViewSize];
     [ImgView2 setImage:[UIImage imageNamed:@"Page_2.png"]];
-    [Scroller addSubview:ImgView2];
-    
-    //Offset View Size
-    ViewSize = CGRectOffset(ViewSize, Scroller.bounds.size.width, 0);
+    [scroller addSubview:ImgView2];
     
     UIImageView *ImgView3 = [[UIImageView alloc] initWithFrame:ViewSize];
     [ImgView3 setImage:[UIImage imageNamed:@"Page_3.png"]];
-    [Scroller addSubview:ImgView3];
+    [scroller addSubview:ImgView3];
     
-    
-    CGRect newViewSize = Scroller.bounds;
-    int NumberOfImages = 3;
+    CGRect newViewSize = scroller.bounds;
+    int NumberOfImages = 15;
     int i;
     for(i=0;i<NumberOfImages;i++){
         
@@ -61,19 +60,18 @@
             UIImageView *ImgView = [[UIImageView alloc] initWithFrame:newViewSize];
             NSString *FilePath = [NSString stringWithFormat:@"Page_%d.png", i];
             [ImgView setImage:[UIImage imageNamed:FilePath]];
-            [Scroller addSubview:ImgView];
+            [scroller addSubview:ImgView];
         }else{
             //Setup the rest of the pictures
-            newViewSize = CGRectOffset(ViewSize, Scroller.bounds.size.width, 0);
+            newViewSize = CGRectOffset(ViewSize, scroller.bounds.size.width, 0);
             UIImageView *ImgView = [[UIImageView alloc] initWithFrame:newViewSize];
             NSString *FilePath = [NSString stringWithFormat:@"Page_%d.png", i];
             [ImgView setImage:[UIImage imageNamed:FilePath]];
-            [Scroller addSubview:ImgView];
+            [scroller addSubview:ImgView];
         }
-    }
+   }
     
-    [self.view addSubview:Scroller];
-
+    [self.view addSubview:scroller];
 }
 
 - (void)didReceiveMemoryWarning
