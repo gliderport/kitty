@@ -11,7 +11,7 @@
 @interface XMLParser : NSObject <NSXMLParserDelegate>
 
 @property(nonatomic, strong)NSMutableArray *postArray;
-
+- (id)initWithArray: (NSMutableArray *)postArray;
 - (void)parseXMLFile;
 
 @end

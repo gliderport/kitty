@@ -14,13 +14,14 @@
 @property NSXMLParser *parser;
 @property NSString *element;
 
+
 // Post properties
 @property (strong, nonatomic) NSString *currentUserName;
 @property (strong, nonatomic) NSDate *currentDate;
 @property (nonatomic) NSUInteger *currentViews;
 @property (strong, nonatomic) NSString *currentImagePath;
-@property (strong, nonatomic) NSString *currentUserImagePath;
-@property (strong, nonatomic) NSString *currentPostImagePath;
+@property (strong, nonatomic) NSString *currentUserImage;
+@property (strong, nonatomic) NSString *currentPostImage;
 @property (strong, nonatomic) NSString *currentPostTitle;
 @property (nonatomic) NSUInteger currentLikes;
 @property (nonatomic) NSUInteger currentReBoom;
@@ -28,7 +29,15 @@
 
 @end
 
-@implementation XMLParser 
+@implementation XMLParser
+
+- (id)initWithArray: (NSMutableArray *)postArray {
+    self = [super init];
+    if (self) {
+        self.postArray = postArray;
+    }
+    return self;
+}
 
 -(void)parseXMLFile{
     
@@ -73,11 +82,11 @@ foundCharacters:(NSString *)string {
         NSLog(@"imagepath : %@",string);
     }
     else if ([self.element isEqualToString:@"user_image"]) {
-        self.currentUserImagePath = string;
+        self.currentUserImage = string;
         NSLog(@"user_image : %@",string);
     }
     else if ([self.element isEqualToString:@"post_image"]) {
-        self.currentPostImagePath = string;
+        self.currentPostImage = string;
         NSLog(@"post_image : %@",string);
     }
     else if ([self.element isEqualToString:@"post_title"]) {
@@ -107,7 +116,8 @@ foundCharacters:(NSString *)string {
     if ([elementName isEqualToString:@"post"]) {
         Post *post = [[Post alloc] initWithName:self.currentUserName
                                                     title:self.currentPostTitle
-                                                    likes: self.currentLikes];
+                                                    likes: self.currentLikes
+                                                postImage:self.currentPostImage];
   
         [self.postArray addObject:post];
         

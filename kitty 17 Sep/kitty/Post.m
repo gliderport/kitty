@@ -13,6 +13,7 @@
 - (id)initWithName: (NSString *)name
              title: (NSString *)title
              likes: (NSUInteger)likes
+         postImage:(NSString *)postImage
 {
     
     self = [super init];
@@ -20,6 +21,7 @@
         self.name = name;
         self.title = title;
         self.likes = likes;
+        self.postImage = postImage;
         
     }
     return self;

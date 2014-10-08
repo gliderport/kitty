@@ -13,8 +13,10 @@
 @property NSString *name;
 @property NSString *title;
 @property NSInteger *likes;
+@property NSString *postImage;
 
 - (id)initWithName: (NSString *)name
              title: (NSString *)title
-             likes: (NSUInteger)likes;
+             likes: (NSUInteger)likes
+        postImage:(NSString *)postImage;
 @end

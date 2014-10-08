@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLParser.h"
 
 @interface KTFirstViewController : UIViewController
 
@@ -15,6 +16,7 @@
 @property (nonatomic) NSInteger *views;
 @property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) NSString *postImagePath;
+@property (strong, nonatomic) NSString *postImage;
 @property (strong, nonatomic) NSString *postTitle;
 @property (nonatomic) NSInteger likes;
 @property (nonatomic) NSInteger reBoom;
