@@ -50,7 +50,6 @@
 		B71823C419C79A1900FE4EAD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B718239819C79A1900FE4EAD /* Icon@2x.png */; };
 		B71823C519C79A1900FE4EAD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B718239919C79A1900FE4EAD /* iTunesArtwork.png */; };
 		B71823C619C79A1900FE4EAD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B718239A19C79A1900FE4EAD /* iTunesArtwork@2x.png */; };
-		B71C66E319E360B0004B4F7C /* UserInfo.xml in Resources */ = {isa = PBXBuildFile; fileRef = B71C66E219E360B0004B4F7C /* UserInfo.xml */; };
 		B71C66E619E36261004B4F7C /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B71C66E519E36261004B4F7C /* XMLParser.m */; };
 		B71C66E919E36456004B4F7C /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = B71C66E819E36456004B4F7C /* Post.m */; };
 		B738316B19C37FF800AD5330 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B738316A19C37FF800AD5330 /* Foundation.framework */; };
@@ -86,6 +85,7 @@
 		B77F044D19D0D2B00039302F /* Page_13.png in Resources */ = {isa = PBXBuildFile; fileRef = B77F044119D0D2B00039302F /* Page_13.png */; };
 		B77F044E19D0D2B00039302F /* Page_14.png in Resources */ = {isa = PBXBuildFile; fileRef = B77F044219D0D2B00039302F /* Page_14.png */; };
 		B77F044F19D0D2B00039302F /* Page_15.png in Resources */ = {isa = PBXBuildFile; fileRef = B77F044319D0D2B00039302F /* Page_15.png */; };
+		B7C48D6F1A005ECD00EBC5B2 /* UserInfo.xml in Resources */ = {isa = PBXBuildFile; fileRef = B7C48D6E1A005ECD00EBC5B2 /* UserInfo.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,7 +142,6 @@
 		B718239819C79A1900FE4EAD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B718239919C79A1900FE4EAD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		B718239A19C79A1900FE4EAD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		B71C66E219E360B0004B4F7C /* UserInfo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UserInfo.xml; sourceTree = "<group>"; };
 		B71C66E419E36261004B4F7C /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		B71C66E519E36261004B4F7C /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		B71C66E719E36456004B4F7C /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -186,6 +185,7 @@
 		B77F044119D0D2B00039302F /* Page_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page_13.png; sourceTree = "<group>"; };
 		B77F044219D0D2B00039302F /* Page_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page_14.png; sourceTree = "<group>"; };
 		B77F044319D0D2B00039302F /* Page_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page_15.png; sourceTree = "<group>"; };
+		B7C48D6E1A005ECD00EBC5B2 /* UserInfo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UserInfo.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,7 +411,7 @@
 		B738317119C37FF800AD5330 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B71C66E219E360B0004B4F7C /* UserInfo.xml */,
+				B7C48D6E1A005ECD00EBC5B2 /* UserInfo.xml */,
 				B718236419C79A1900FE4EAD /* Images */,
 				B738317919C37FF800AD5330 /* KTAppDelegate.h */,
 				B738317A19C37FF800AD5330 /* KTAppDelegate.m */,
@@ -554,6 +554,7 @@
 				B71823B119C79A1900FE4EAD /* Icon-Small.png in Resources */,
 				B77F044619D0D2B00039302F /* Page_6.png in Resources */,
 				B71823C019C79A1900FE4EAD /* Icon-Small-50@2x.png in Resources */,
+				B7C48D6F1A005ECD00EBC5B2 /* UserInfo.xml in Resources */,
 				B71823A819C79A1900FE4EAD /* ic_launcher.png in Resources */,
 				B7720CDA19E4D09900C5ED40 /* Page_0.png in Resources */,
 				B71823A419C79A1900FE4EAD /* Search_highlighted.png in Resources */,
@@ -576,7 +577,6 @@
 				B77F044A19D0D2B00039302F /* Page_10.png in Resources */,
 				B71823BD19C79A1900FE4EAD /* Icon-76.png in Resources */,
 				B77F044519D0D2B00039302F /* Page_5.png in Resources */,
-				B71C66E319E360B0004B4F7C /* UserInfo.xml in Resources */,
 				B71823BF19C79A1900FE4EAD /* Icon-Small-50.png in Resources */,
 				B71823C619C79A1900FE4EAD /* iTunesArtwork@2x.png in Resources */,
 				B77F044D19D0D2B00039302F /* Page_13.png in Resources */,

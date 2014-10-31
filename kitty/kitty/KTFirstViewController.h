@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "XMLParser.h"
 
-@interface KTFirstViewController : UIViewController
+@interface KTFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSString *userName;
 @property (strong, nonatomic) NSDate *date;

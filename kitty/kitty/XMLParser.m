@@ -18,14 +18,14 @@
 // Post properties
 @property (strong, nonatomic) NSString *currentUserName;
 @property (strong, nonatomic) NSDate *currentDate;
-@property (nonatomic) NSUInteger *currentViews;
+@property (nonatomic) NSInteger *currentViews;
 @property (strong, nonatomic) NSString *currentImagePath;
 @property (strong, nonatomic) NSString *currentUserImage;
 @property (strong, nonatomic) NSString *currentPostImage;
 @property (strong, nonatomic) NSString *currentPostTitle;
-@property (nonatomic) NSUInteger currentLikes;
-@property (nonatomic) NSUInteger currentReBoom;
-@property (nonatomic) NSUInteger currentTotalComments;
+@property (nonatomic) NSInteger currentLikes;
+@property (nonatomic) NSInteger currentReBoom;
+@property (nonatomic) NSInteger currentTotalComments;
 
 @end
 
@@ -67,44 +67,44 @@ foundCharacters:(NSString *)string {
     if ([self.element isEqualToString:@"user_name"]) {
         
         self.currentUserName = string;
-        NSLog(@"name : %@",string);
+        //NSLog(@"name : %@",string);
     }
     else if ([self.element isEqualToString:@"post_date"]) {
         self.currentDate = string;
-        NSLog(@"date : %@",string);
+        //NSLog(@"date : %@",string);
     }
     else if ([self.element isEqualToString:@"views"]) {
         self.currentViews = string.intValue;
-        NSLog(@"views : %@",string);
+       // NSLog(@"views : %@",string);
     }
     else if ([self.element isEqualToString:@"imagepath"]) {
         self.currentImagePath = string;
-        NSLog(@"imagepath : %@",string);
+       /// NSLog(@"imagepath : %@",string);
     }
     else if ([self.element isEqualToString:@"user_image"]) {
         self.currentUserImage = string;
-        NSLog(@"user_image : %@",string);
+       /// NSLog(@"user_image : %@",string);
     }
     else if ([self.element isEqualToString:@"post_image"]) {
         self.currentPostImage = string;
-        NSLog(@"post_image : %@",string);
+        ///NSLog(@"post_image : %@",string);
     }
     else if ([self.element isEqualToString:@"post_title"]) {
         self.currentPostTitle = string;
-        NSLog(@"post_title : %@",string);
+        ///NSLog(@"post_title : %@",string);
     }
     else if ([self.element isEqualToString:@"likes"]) {
         self.currentLikes = string.intValue;
-        NSLog(@"likes : %@",string);
+       // NSLog(@"likes : %@",string);
     }
     else if ([self.element isEqualToString:@"rebooms"]) {
         self.currentReBoom = string.intValue;
-        NSLog(@"rebooms : %@",string);
+       // NSLog(@"rebooms : %@",string);
     }
     
     else if ([self.element isEqualToString:@"comments_total"]) {
         self.currentTotalComments = string.intValue;
-        NSLog(@"comments_total : %@",string);
+        //NSLog(@"comments_total : %@",string);
     }
 }
 
@@ -115,9 +115,12 @@ foundCharacters:(NSString *)string {
     
     if ([elementName isEqualToString:@"post"]) {
         Post *post = [[Post alloc] initWithName:self.currentUserName
-                                                    title:self.currentPostTitle
-                                                    likes: self.currentLikes
-                                                postImage:self.currentPostImage];
+                                          title:self.currentPostTitle
+                                          views:self.currentViews
+                                      postImage:self.currentPostImage
+                                          likes: self.currentLikes
+                                         reboom: self.currentReBoom
+                                   totalComment: self.currentTotalComments];
   
         [self.postArray addObject:post];
         

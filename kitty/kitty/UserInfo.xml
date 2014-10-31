@@ -26,4 +26,30 @@
     <rebooms>345</rebooms>
     <comments_total>20</comments_total>
 </post>
+<post>
+    <id>3</id>
+    <user_name>Sumit</user_name>
+    <post_date>AUG 2</post_date>
+    <views>86</views>
+    <imagepath>/Users/Shilpi/Documents/Developement/XML/Images</imagepath>
+    <user_image>/Images/kate.png</user_image>
+    <post_image>Page_1</post_image>
+    <post_title>Lebron's big Dome!!</post_title>
+    <likes>560</likes>
+    <rebooms>345</rebooms>
+    <comments_total>20</comments_total>
+</post>
+<post>
+    <id>4</id>
+    <user_name>Shilpi</user_name>
+    <post_date>AUG 2</post_date>
+    <views>86</views>
+    <imagepath>/Users/Shilpi/Documents/Developement/XML/Images</imagepath>
+    <user_image>/Images/kate.png</user_image>
+    <post_image>Page_1</post_image>
+    <post_title>Lebron's big Dome!!</post_title>
+    <likes>560</likes>
+    <rebooms>345</rebooms>
+    <comments_total>20</comments_total>
+</post>
 </user_info>

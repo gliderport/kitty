@@ -12,16 +12,22 @@
 
 - (id)initWithName: (NSString *)name
              title: (NSString *)title
-             likes: (NSUInteger)likes
+             views:(NSInteger) views
          postImage:(NSString *)postImage
+             likes: (NSInteger)likes
+            reboom: (NSUInteger)reBoom
+      totalComment: (NSUInteger)totalComments
 {
     
     self = [super init];
     if (self) {
         self.name = name;
         self.title = title;
-        self.likes = likes;
+        self.views = views;
         self.postImage = postImage;
+        self.likes = likes;
+        self.reBoom = reBoom;
+        self.totalComments = totalComments;
         
     }
     return self;

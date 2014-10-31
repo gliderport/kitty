@@ -12,11 +12,18 @@
 
 @property NSString *name;
 @property NSString *title;
-@property NSInteger *likes;
+@property NSInteger views;
 @property NSString *postImage;
+@property NSInteger likes;
+@property NSInteger reBoom;
+@property NSInteger totalComments;
 
 - (id)initWithName: (NSString *)name
              title: (NSString *)title
-             likes: (NSUInteger)likes
-        postImage:(NSString *)postImage;
+             views:(NSInteger) views
+         postImage:(NSString *)postImage
+             likes: (NSInteger)likes
+            reboom: (NSUInteger)reBoom
+      totalComment: (NSUInteger)totalComments;
+
 @end
